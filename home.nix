@@ -85,6 +85,84 @@
     };
   };
 
+  # Gnome configs - @todo some of these applications need removing from below lists
+  dconf.settings = {
+    "org/gnome/shell" = {
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "org.gnome.Geary.desktop"
+        "google-chrome.desktop"
+        "code.desktop"
+        "phpstorm.desktop"
+      ];
+    };
+    "org/gnome/desktop/app-folders" = {
+      folder-children = [
+        "System"
+        "Utility"
+        "Office"
+      ];
+    };
+    "org/gnome/desktop/app-folders/folders/System" = {
+      name = "System";
+      apps = [
+        "org.gnome.Settings.desktop"
+        "gnome-system-monitor.desktop"
+        "org.gnome.PowerStats.desktop"
+        "org.gnome.baobab.desktop"
+        "org.gnome.DiskUtility.desktop"
+        "gparted.desktop"
+        "org.gnome.Extensions.desktop"
+        "org.gnome.tweaks.desktop"
+        "org.gnome.Terminal.desktop"
+        "bssh.desktop"
+        "bvnc.desktop"
+        "avahi-discover.desktop"
+        "nm-connection-editor.desktop"
+        "org.gnome.Logs.desktop"
+      ];
+    };
+    "org/gnome/desktop/app-folders/folders/Utility" = {
+      name = "Utility";
+      apps = [
+        "htop.desktop"
+        "timeshift-gtk.desktop"
+        "ca.desrt.dconf-editor.desktop"
+        "org.gnome.seahorse.Application.desktop"
+        "org.gnome.Connections.desktop"
+        "org.gnome.gedit.desktop"
+        "org.gnome.eog.desktop"
+        "org.gnome.Evince.desktop"
+        "org.gnome.FileRoller.desktop"
+        "org.gnome.font-viewer.desktop"
+        "simple-scan.desktop"
+        "org.gnome.Totem.desktop"
+        "org.gnome.Weather.desktop"
+        "cups.desktop"
+        "org.gnome.Characters.desktop"
+        "qv4l2.desktop"
+        "qvidcap.desktop"
+        "yelp.desktop"
+      ];
+    };
+    "org/gnome/desktop/app-folders/folders/Office" = {
+      name = "Office";
+      apps = [
+        "startcenter.desktop"
+        "writer.desktop"
+        "calc.desktop"
+        "impress.desktop"
+        "base.desktop"
+        "draw.desktop"
+        "math.desktop"
+      ];
+    };
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+      enable-hot-corners = false;
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
