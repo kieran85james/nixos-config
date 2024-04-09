@@ -105,6 +105,9 @@
       firefox
       vscode
       jetbrains.phpstorm
+      dbeaver
+      # postman
+      slack
     ];
   };
 
@@ -117,8 +120,11 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     git
+    bitwarden
     google-chrome
     libreoffice
+    spotify
+    authenticator
     gnome.gnome-boxes
     gnome.gnome-terminal
   ];
