@@ -89,11 +89,16 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
-        "org.gnome.Nautilus.desktop"
-        "org.gnome.Geary.desktop"
         "google-chrome.desktop"
         "code.desktop"
         "phpstorm.desktop"
+        "dbeaver.desktop"
+        "slack.desktop"
+        "bitwarden.desktop"
+        "com.belmoussaoui.Authenticator.desktop"
+        "org.gnome.Geary.desktop"
+        "org.gnome.Nautilus.desktop"
+        "spotify.desktop"
       ];
     };
     "org/gnome/desktop/app-folders" = {
@@ -108,25 +113,17 @@
       apps = [
         "org.gnome.Settings.desktop"
         "gnome-system-monitor.desktop"
-        "org.gnome.PowerStats.desktop"
         "org.gnome.baobab.desktop"
         "org.gnome.DiskUtility.desktop"
-        "gparted.desktop"
         "org.gnome.Extensions.desktop"
         "org.gnome.tweaks.desktop"
         "org.gnome.Terminal.desktop"
-        "bssh.desktop"
-        "bvnc.desktop"
-        "avahi-discover.desktop"
-        "nm-connection-editor.desktop"
         "org.gnome.Logs.desktop"
       ];
     };
     "org/gnome/desktop/app-folders/folders/Utility" = {
       name = "Utility";
       apps = [
-        "htop.desktop"
-        "timeshift-gtk.desktop"
         "ca.desrt.dconf-editor.desktop"
         "org.gnome.seahorse.Application.desktop"
         "org.gnome.Connections.desktop"
