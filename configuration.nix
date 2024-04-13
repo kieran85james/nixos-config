@@ -127,6 +127,25 @@
     authenticator
     gnome.gnome-boxes
     gnome.gnome-terminal
+    gnome.gnome-tweaks
+    colordiff
+    curl
+    wget
+    shotwell
+    steam
+    zsh
+    mariadb
+    joplin-desktop
+    ferdium
+    docker
+    cryptomator
+    unrar
+    htop
+    # gparted
+    # dconf-editor may already be installed.
+    # wireguard-tools
+    # fira mono font
+    # p7zip
   ];
 
   # Remove NixOS documentation icon
