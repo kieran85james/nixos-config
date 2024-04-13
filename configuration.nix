@@ -142,10 +142,10 @@
     unrar
     htop
     gnome.dconf-editor
+    wireguard-tools
+    fira-mono
+    p7zip
     # gparted
-    # wireguard-tools
-    # fira mono font
-    # p7zip
   ];
 
   # Remove NixOS documentation icon
