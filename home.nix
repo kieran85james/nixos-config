@@ -85,7 +85,7 @@
     };
   };
 
-  # Gnome configs - @todo some of these applications need removing from below lists
+  # Gnome configs
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
@@ -124,11 +124,10 @@
     "org/gnome/desktop/app-folders/folders/Utility" = {
       name = "Utility";
       apps = [
+        "htop.desktop"
         "ca.desrt.dconf-editor.desktop"
         "org.gnome.seahorse.Application.desktop"
         "org.gnome.Connections.desktop"
-        "org.gnome.gedit.desktop"
-        "org.gnome.eog.desktop"
         "org.gnome.Evince.desktop"
         "org.gnome.FileRoller.desktop"
         "org.gnome.font-viewer.desktop"
@@ -137,8 +136,6 @@
         "org.gnome.Weather.desktop"
         "cups.desktop"
         "org.gnome.Characters.desktop"
-        "qv4l2.desktop"
-        "qvidcap.desktop"
         "yelp.desktop"
       ];
     };

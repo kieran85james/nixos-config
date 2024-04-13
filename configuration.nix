@@ -141,8 +141,8 @@
     cryptomator
     unrar
     htop
+    gnome.dconf-editor
     # gparted
-    # dconf-editor may already be installed.
     # wireguard-tools
     # fira mono font
     # p7zip
