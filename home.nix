@@ -66,6 +66,43 @@
     # EDITOR = "emacs";
   };
 
+  xdg.enable = true;
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    music = "${config.home.homeDirectory}/media/music";
+    videos = "${config.home.homeDirectory}/media/videos";
+    pictures = "${config.home.homeDirectory}/media/pictures";
+    templates = "${config.home.homeDirectory}/templates";
+    download = "${config.home.homeDirectory}/downloads";
+    documents = "${config.home.homeDirectory}/media/documents";
+    desktop = null;
+    publicShare = "${config.home.homeDirectory}/public";
+    extraConfig = {
+      XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
+      XDG_BOOK_DIR = "${config.home.homeDirectory}/media/books";
+      XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
+      XDG_JOBS_DIR = "${config.home.homeDirectory}/projects/jobs";
+      XDG_APP_DIR = "${config.home.homeDirectory}/projects/jobs/app";
+      XDG_APP_BAKS_DIR = "${config.home.homeDirectory}/projects/jobs/app/backups";
+      XDG_PERSONAL_DIR = "${config.home.homeDirectory}/projects/personal";
+    };
+  };
+  xdg.mime.enable = true;
+  xdg.mimeApps.enable = true;
+
+  gtk.enable = true;
+  gtk.gtk3.bookmarks = [
+    "file:///home/kieran/downloads Downloads"
+    "file:///home/kieran/media/documents Documents"
+    "file:///home/kieran/media/music Music"
+    "file:///home/kieran/media/pictures Pictures"
+    "file:///home/kieran/media/videos Videos"
+    "file:///home/kieran/projects Projects"
+    "file:///home/kieran/projects/personal Personal Projects"
+    "file:///home/kieran/projects/jobs/app APP Wholesale"
+  ];
+
   programs.git = {
     enable = true;
     userName = "Kieran James";
@@ -73,7 +110,23 @@
     extraConfig = {
       init.defaultBranch = "main";
     };
+    includes = [{
+      condition = "gitdir:${config.home.homeDirectory}/projects/jobs/app/";
+      contents = {
+        user.name = "Kieran James";
+        user.email = "kieran.james@appwholesaleltd.co.uk";
+      };
+    }];
   };
+
+  # to enable ssh and configer .ssh/config file
+  # programs.ssh.enable = true;
+  # programs.ssh.matchBlocks = {
+  #   "john.example.com" = {
+  #     hostname = "example.com";
+  #     user = "john";
+  #   };
+  # };
 
   programs.bash = {
     enable = true;
