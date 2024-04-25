@@ -145,6 +145,7 @@
     wireguard-tools
     fira-mono
     p7zip
+    neofetch
     # gparted
   ];
 
