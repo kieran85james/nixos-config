@@ -61,7 +61,7 @@ in
 {
   programs.bash = {
     enable = true;
-    shellAliases = myAliases;
+    shellAliases = myAliases // {"reload" = "source ~/.bashrc";};
     historyControl = ["ignorespace"];
     shellOptions = [
       "histappend"
@@ -140,9 +140,6 @@ in
           echo "'$1' is not a valid file"
         fi
       }
-
-      # reload bash config
-      alias reload="source ~/.bashrc"
     '';
   };
 }
