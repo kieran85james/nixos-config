@@ -133,6 +133,7 @@
   # };
 
   # Gnome configs
+  # dconf.enable = true;
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
@@ -201,6 +202,75 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+    };
+    "org/gnome/shell/keybindings" = {
+      toggle-message-tray = ["<Super>v"];
+    };
+    "org/gnome/desktop/wm/keybindings" = {
+      cycle-panels = ["<Super>Escape"];
+      cycle-panels-backward = ["<Shift><Super>Escape"];
+      close = ["<Super>q"];
+      toggle-maximized = ["<Super>m"];
+      show-desktop = ["<Super>d"];
+      move-to-center = ["<Super>c"];
+      switch-to-workspace-1 = ["<Control><Super>1"];
+      switch-to-workspace-2 = ["<Control><Super>2"];
+      switch-to-workspace-3 = ["<Control><Super>3"];
+      switch-to-workspace-4 = ["<Control><Super>4"];
+      switch-to-workspace-5 = ["<Control><Super>5"];
+      switch-to-workspace-6 = ["<Control><Super>6"];
+      switch-to-workspace-7 = ["<Control><Super>7"];
+      switch-to-workspace-8 = ["<Control><Super>8"];
+      switch-to-workspace-9 = ["<Control><Super>9"];
+      switch-to-workspace-0 = ["<Control><Super>0"];
+      switch-to-workspace-left = ["<Control><Super>Left"];
+      switch-to-workspace-right = ["<Control><Super>Right"];
+      move-to-workspace-1 = ["<Shift><Control><Super>1"];
+      move-to-workspace-2 = ["<Shift><Control><Super>2"];
+      move-to-workspace-3 = ["<Shift><Control><Super>3"];
+      move-to-workspace-4 = ["<Shift><Control><Super>4"];
+      move-to-workspace-5 = ["<Shift><Control><Super>5"];
+      move-to-workspace-6 = ["<Shift><Control><Super>6"];
+      move-to-workspace-7 = ["<Shift><Control><Super>7"];
+      move-to-workspace-8 = ["<Shift><Control><Super>8"];
+      move-to-workspace-9 = ["<Shift><Control><Super>9"];
+      move-to-workspace-0 = ["<Shift><Control><Super>0"];
+      move-to-workspace-left = ["<Shift><Control><Super>Left"];
+      move-to-workspace-right = ["<Shift><Control><Super>Right"];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
+      ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Launch terminal";
+      command = "gnome-terminal";
+      binding = "<Super>t";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      name = "Launch file manager";
+      command = "nautilus -w /home/kieran";
+      binding = "<Super>f";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+      name = "Launch browser";
+      command = "google-chrome";
+      binding = "<Super>b";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      name = "Launch browser (incognito)";
+      command = "google-chrome --incognito";
+      binding = "<Shift><Super>b";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
+      name = "Launch text editor (GUI)";
+      command = "phpstorm";
+      binding = "<Super>e";
     };
   };
 
