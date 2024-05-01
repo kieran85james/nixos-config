@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      # ./system/common/hardware/bluetooth.nix
       ./system/common/desktop/gnome.nix
     ];
 
