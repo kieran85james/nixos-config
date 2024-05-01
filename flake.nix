@@ -1,5 +1,5 @@
 {
-  description = "My first flake!";
+  description = "Kieran's NixOS configuration!";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.11";
