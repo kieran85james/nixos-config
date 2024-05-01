@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./system/desktop/gnome.nix
+      ./system/common/desktop/gnome.nix
     ];
 
   # Enable experimental-features
