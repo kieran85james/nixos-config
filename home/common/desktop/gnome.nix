@@ -152,12 +152,12 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       name = "Launch browser";
-      command = "google-chrome";
+      command = "google-chrome-stable";
       binding = "<Super>b";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
       name = "Launch browser (incognito)";
-      command = "google-chrome --incognito";
+      command = "google-chrome-stable --incognito";
       binding = "<Shift><Super>b";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
