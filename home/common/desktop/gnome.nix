@@ -72,12 +72,19 @@
       toggle-message-tray = ["<Super>v"];
     };
     "org/gnome/desktop/wm/keybindings" = {
-      cycle-panels = ["<Super>Escape"];
-      cycle-panels-backward = ["<Shift><Super>Escape"];
-      close = ["<Super>q"];
+      activate-window-menu = ["<Alt>space"];
+
+      begin-move = ["<Alt>F7"];
+      begin-resize = ["<Alt>F8"];
+
+      maximize = ["<Super>Up"];
+      unmaximize = ["<Super>Down"];
       toggle-maximized = ["<Super>m"];
+      minimize = ["<Super>h"];
+      close = ["<Super>q"];
       show-desktop = ["<Super>d"];
       move-to-center = ["<Super>c"];
+
       switch-to-workspace-1 = ["<Control><Super>1"];
       switch-to-workspace-2 = ["<Control><Super>2"];
       switch-to-workspace-3 = ["<Control><Super>3"];
@@ -87,9 +94,11 @@
       switch-to-workspace-7 = ["<Control><Super>7"];
       switch-to-workspace-8 = ["<Control><Super>8"];
       switch-to-workspace-9 = ["<Control><Super>9"];
-      switch-to-workspace-0 = ["<Control><Super>0"];
+      switch-to-workspace-10 = ["<Control><Super>0"];
+      switch-to-workspace-last = ["<Control><Super>End"];
       switch-to-workspace-left = ["<Control><Super>Left"];
       switch-to-workspace-right = ["<Control><Super>Right"];
+
       move-to-workspace-1 = ["<Shift><Control><Super>1"];
       move-to-workspace-2 = ["<Shift><Control><Super>2"];
       move-to-workspace-3 = ["<Shift><Control><Super>3"];
@@ -99,9 +108,28 @@
       move-to-workspace-7 = ["<Shift><Control><Super>7"];
       move-to-workspace-8 = ["<Shift><Control><Super>8"];
       move-to-workspace-9 = ["<Shift><Control><Super>9"];
-      move-to-workspace-0 = ["<Shift><Control><Super>0"];
+      move-to-workspace-10 = ["<Shift><Control><Super>0"];
       move-to-workspace-left = ["<Shift><Control><Super>Left"];
       move-to-workspace-right = ["<Shift><Control><Super>Right"];
+      move-to-workspace-last = ["<Shift><Control><Super>End"];
+
+      move-to-monitor-left = ["<Super><Shift>Left"];
+      move-to-monitor-right = ["<Super><Shift>Right"];
+
+      switch-applications = ["<Super>Tab"];
+      switch-applications-backward = ["<Shift><Super>Tab"];
+      cycle-windows = ["<Alt>Tab"];
+      cycle-windows-backward = ["<Shift><Alt>Tab"];
+
+      switch-group = ["<Super>Above_Tab"];
+      switch-group-backward = ["<Shift><Super>Above_Tab"];
+      cycle-group = ["<Alt>Above_Tab"];
+      cycle-group-backward = ["<Shift><Alt>Above_Tab"];
+
+      switch-panels = ["<Super>Escape"];
+      switch-panels-backward = ["<Shift><Super>Escape"];
+      cycle-panels = ["<Alt>Escape"];
+      cycle-panels-backward = ["<Shift><Alt>Escape"];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
