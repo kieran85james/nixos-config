@@ -1,3 +1,5 @@
+{ config, pkgs, lib, ... }:
+
 {
   dconf.settings = {
     "org/gnome/shell" = {
@@ -67,6 +69,45 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+      show-battery-percentage = true;
+      gtk-theme = "Adwaita-dark";
+    };
+    "org/gnome/desktop/background" = {
+      picture-options = "zoom";
+    };
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
+      workspaces-only-on-primary = false;
+      edge-tiling = true;
+    };
+    "org/gnome/shell/app-switcher" = {
+      current-workspace-only = true;
+    };
+    "org/gnome/desktop/session" = {
+      idle-delay = lib.hm.gvariant.mkUint32 600;
+    };
+    "org/gnome/desktop/screensaver" = {
+      lock-enabled = true;
+    };
+    "org/gnome/desktop/notifications" = {
+      show-in-lock-screen = false;
+    };
+    "org/gnome/desktop/privacy" = {
+      remember-recent-files = true;
+      recent-files-max-age = 30;
+      remove-old-trash-files = true;
+      remove-old-temp-files = true;
+      old-files-age = lib.hm.gvariant.mkUint32 30;
+    };
+    "org/gnome/settings-daemon/plugins/color" = {
+      night-light-enabled = true;
+      night-light-schedule-automatic = true;
+      night-light-schedule-from = 20.0;
+      night-light-schedule-to = 7.0;
+      night-light-temperature = lib.hm.gvariant.mkUint32 2700;
+    };
+    "org/gnome/desktop/media-handling" = {
+      autorun-never = true;
     };
     "org/gnome/shell/keybindings" = {
       toggle-overview = ["<Super>"];
