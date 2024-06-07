@@ -27,6 +27,7 @@
     gnome.gnome-terminal
     gnome.gnome-tweaks
     gnome.dconf-editor
+    gnome-online-accounts
   ];
 
   # Enable programs.
