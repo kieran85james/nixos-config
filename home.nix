@@ -18,6 +18,7 @@
   imports = [
     ./home/common/sh.nix
     ./home/common/desktop/gnome.nix
+    ./home/common/desktop/xdg.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -70,31 +71,6 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
-  xdg.enable = true;
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-    music = "${config.home.homeDirectory}/media/music";
-    videos = "${config.home.homeDirectory}/media/videos";
-    pictures = "${config.home.homeDirectory}/media/pictures";
-    templates = "${config.home.homeDirectory}/templates";
-    download = "${config.home.homeDirectory}/downloads";
-    documents = "${config.home.homeDirectory}/media/documents";
-    desktop = null;
-    publicShare = "${config.home.homeDirectory}/public";
-    extraConfig = {
-      XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
-      XDG_BOOK_DIR = "${config.home.homeDirectory}/media/books";
-      XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
-      XDG_JOBS_DIR = "${config.home.homeDirectory}/projects/jobs";
-      XDG_APP_DIR = "${config.home.homeDirectory}/projects/jobs/app";
-      XDG_APP_BAKS_DIR = "${config.home.homeDirectory}/projects/jobs/app/backups";
-      XDG_PERSONAL_DIR = "${config.home.homeDirectory}/projects/personal";
-    };
-  };
-  xdg.mime.enable = true;
-  xdg.mimeApps.enable = true;
 
   gtk.enable = true;
   gtk.gtk3.bookmarks = [
