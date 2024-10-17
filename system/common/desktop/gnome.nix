@@ -19,6 +19,7 @@
     gnome.gnome-maps
     gnome.gnome-clocks
     gnome.gnome-music
+    gnome.totem
   ];
 
   # GNOME packages.

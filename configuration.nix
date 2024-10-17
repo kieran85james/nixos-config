@@ -83,6 +83,8 @@
     curl
     wget
     shotwell
+    vlc
+    rhythmbox
     steam
     zsh
     mariadb
