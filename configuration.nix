@@ -59,7 +59,7 @@
       firefox
       vscode
       jetbrains.phpstorm
-      dbeaver
+      dbeaver-bin
       # postman
       slack
     ];
