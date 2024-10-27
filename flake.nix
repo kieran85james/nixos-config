@@ -18,6 +18,10 @@
         inherit system;
         modules = [ ./host/vm/configuration.nix ];
       };
+      darkarmy = lib.nixosSystem {
+        inherit system;
+        modules = [ ./host/darkarmy/configuration.nix ];
+      };
     };
     homeConfigurations = {
       kieran = home-manager.lib.homeManagerConfiguration {
