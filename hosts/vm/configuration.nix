@@ -7,6 +7,7 @@
 
       ../common/base/nixos.nix
       ../common/base/locale.nix
+      ../common/base/packages.nix
 
       ../common/services/networkmanager.nix
       ../common/services/pipewire.nix
@@ -47,32 +48,21 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    git
     bitwarden
     google-chrome
     libreoffice
     spotify
     authenticator
-    colordiff
-    curl
-    wget
     shotwell
     vlc
     rhythmbox
     steam
-    zsh
     mariadb
     joplin-desktop
     ferdium
     docker
     cryptomator
-    unrar
-    htop
-    wireguard-tools
     fira-mono
-    p7zip
-    neofetch
     # gparted
   ];
 
