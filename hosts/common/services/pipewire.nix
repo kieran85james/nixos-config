@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+_: {
   hardware.pulseaudio.enable = false;
 
   services.pipewire = {
@@ -8,5 +7,4 @@
     pulse.enable = true;
     wireplumber.enable = true;
   };
-  
 }

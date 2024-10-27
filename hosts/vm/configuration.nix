@@ -8,10 +8,13 @@
       ../common/base/nixos.nix
       ../common/base/locale.nix
 
+      ../common/services/networkmanager.nix
+      ../common/services/pipewire.nix
+      ../common/services/cups.nix
+      
       # ../common/hardware/bluetooth.nix
 
       ../common/desktop/gnome.nix
-      ../common/desktop/services/pipewire.nix
     ];
 
   # Bootloader.
@@ -21,16 +24,6 @@
 
   networking.hostName = "vm"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable networking
-  networking = {
-    networkmanager = {
-      enable = true;
-    };
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
