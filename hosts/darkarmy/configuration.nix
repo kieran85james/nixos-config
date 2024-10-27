@@ -4,9 +4,9 @@
   imports =
     [
       ./hardware-configuration.nix
-      # ./system/common/hardware/bluetooth.nix
-      ./system/common/base/locale.nix
-      ./system/common/desktop/gnome.nix
+      # ../common/hardware/bluetooth.nix
+      ../common/base/locale.nix
+      ../common/desktop/gnome.nix
     ];
 
   # Enable experimental-features

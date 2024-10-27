@@ -14,13 +14,18 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
+      # Test
       vm = lib.nixosSystem {
         inherit system;
-        modules = [ ./host/vm/configuration.nix ];
+        modules = [ ./hosts/vm/configuration.nix ];
       };
+
+      # Work
+
+      # Personal
       darkarmy = lib.nixosSystem {
         inherit system;
-        modules = [ ./host/darkarmy/configuration.nix ];
+        modules = [ ./hosts/darkarmy/configuration.nix ];
       };
     };
     homeConfigurations = {
