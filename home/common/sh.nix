@@ -55,7 +55,7 @@ let
 
     # # NixOS
     "nix-update" = "nix flake update";
-    "nix-rebuild" = "sudo nixos-rebuild switch --flake . && home-manager switch --flake .";
+    "nix-rebuild" = "sudo nixos-rebuild switch --flake .#$HOSTNAME && home-manager switch --flake .";
   };
 in
 {
