@@ -82,6 +82,7 @@
     "file:///home/kieran/projects Projects"
     "file:///home/kieran/projects/personal Personal Projects"
     "file:///home/kieran/projects/jobs/app APP Wholesale"
+    "smb://ds923-plus/ DS923-PLUS"
   ];
 
   programs.git = {
