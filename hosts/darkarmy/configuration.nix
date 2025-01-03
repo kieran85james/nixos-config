@@ -10,6 +10,7 @@
       ../common/base/packages.nix
 
       ../common/services/networkmanager.nix
+      ../common/services/displaylink.nix
       ../common/services/pipewire.nix
       ../common/services/cups.nix
       
