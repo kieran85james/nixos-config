@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, unstable, ... }:
 
 {
   imports =
@@ -46,7 +46,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     bitwarden
     google-chrome
@@ -58,13 +58,18 @@
     rhythmbox
     steam
     mariadb
-    joplin-desktop
     ferdium
     docker
     cryptomator
     fira-mono
     # gparted
-  ];
+  ])
+
+  ++
+
+  (with unstable; [
+    joplin-desktop
+  ]);
 
   virtualisation.libvirtd.enable = true;
 
