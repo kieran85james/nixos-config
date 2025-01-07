@@ -1,4 +1,4 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -11,11 +11,11 @@
 
       ../common/services/networkmanager.nix
       ../common/services/displaylink.nix
+      ../common/services/tailscale.nix
       ../common/services/pipewire.nix
       ../common/services/cups.nix
-      
-      # ../common/hardware/bluetooth.nix
 
+      ../common/desktop/packages.nix
       ../common/desktop/gnome.nix
     ];
 
@@ -39,37 +39,12 @@
       vscode
       jetbrains.phpstorm
       dbeaver-bin
+      mariadb
+      docker
       # postman
       slack
     ];
   };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = (with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    bitwarden
-    google-chrome
-    libreoffice
-    spotify
-    authenticator
-    shotwell
-    vlc
-    rhythmbox
-    steam
-    mariadb
-    ferdium
-    docker
-    cryptomator
-    fira-mono
-    # gparted
-  ])
-
-  ++
-
-  (with unstable; [
-    joplin-desktop
-  ]);
 
   virtualisation.libvirtd.enable = true;
 

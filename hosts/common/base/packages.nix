@@ -15,9 +15,4 @@
     wireguard-tools
     zsh
   ];
-
-  services.tailscale = {
-    enable = true;
-    useRoutingFeatures = "client";
-  };
 }
