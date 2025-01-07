@@ -17,6 +17,9 @@
 
       ../common/desktop/packages.nix
       ../common/desktop/gnome.nix
+
+      ../common/users/kieran/default.nix
+      ../common/users/gemma/default.nix
     ];
 
   # Bootloader.

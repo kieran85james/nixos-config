@@ -17,6 +17,9 @@
 
       ../common/desktop/packages.nix
       ../common/desktop/gnome.nix
+      
+      ../common/users/kieran/default.nix
+      ../common/users/gemma/default.nix
     ];
 
   # Bootloader.
@@ -29,23 +32,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kieran = {
-    isNormalUser = true;
-    description = "Kieran James";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      vscode
-      jetbrains.phpstorm
-      dbeaver-bin
-      mariadb
-      docker
-      # postman
-      slack
-    ];
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
