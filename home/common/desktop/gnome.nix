@@ -208,7 +208,7 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       name = "Launch file manager";
-      command = "nautilus -w /home/kieran";
+      command = "nautilus -w ${config.home.homeDirectory}";
       binding = "<Super>f";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
