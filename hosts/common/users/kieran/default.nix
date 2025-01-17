@@ -5,7 +5,7 @@
   users.users.kieran = {
     isNormalUser = true;
     description = "Kieran James";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       firefox
       vscode
