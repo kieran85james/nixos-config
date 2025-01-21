@@ -22,13 +22,13 @@
   # Remove NixOS documentation icon
   documentation.nixos.enable = false;
 
-  # virtualisation = {
-  #   docker = {
-  #     enable = true;
-  #     autoPrune = {
-  #       enable = true;
-  #       dates = "weekly";
-  #     };
-  #   };
-  # };
+  virtualisation = {
+    docker = {
+      enable = true;
+      autoPrune = {
+        enable = true;
+        dates = "weekly";
+      };
+    };
+  };
 }
