@@ -14,14 +14,16 @@
     wget
     wireguard-tools
     zsh
+    php83
+    php83Packages.composer
+    php83Extensions.mbstring
+    mariadb
+    nodejs
   ])
 
   ++
     
   (with unstable; [
-    php84
-    php84Packages.composer
-    mariadb
     laravel
   ]);
 
@@ -29,4 +31,6 @@
     enable = true;
     package = unstable.mariadb;
   };
+
+  programs.npm.enable = true;
 }
