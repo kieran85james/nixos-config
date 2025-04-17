@@ -16,18 +16,18 @@
     epiphany
     gnome-tour
     gnome-console
-    gnome.gnome-maps
-    gnome.gnome-clocks
-    gnome.gnome-music
-    gnome.totem
+    gnome-maps
+    gnome-clocks
+    gnome-music
+    totem
   ];
 
   # GNOME packages.
   environment.systemPackages = with pkgs; [
-    gnome.gnome-boxes
-    gnome.gnome-terminal
-    gnome.gnome-tweaks
-    gnome.dconf-editor
+    gnome-boxes
+    gnome-terminal
+    gnome-tweaks
+    dconf-editor
     gnome-online-accounts
   ];
 
