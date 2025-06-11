@@ -19,6 +19,7 @@
     gnome-maps
     gnome-clocks
     gnome-music
+    decibels
     totem
   ];
 
