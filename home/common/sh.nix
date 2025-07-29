@@ -26,6 +26,7 @@ let
     "watch" = "watch -d";
     "weather" = "curl wttr.in";
     "wget" = "wget -c";
+    "yt-dlp" = "yt-dlp -o '~/downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s'";
 
     # ## get top process eating memory
     "mem5" = "ps auxf | sort -nr -k 4 | head -5";
