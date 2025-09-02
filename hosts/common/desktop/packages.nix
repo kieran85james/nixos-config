@@ -16,6 +16,7 @@
     ferdium
     cryptomator
     fira-mono
+    protonvpn-gui
     # gparted
   ])
 
