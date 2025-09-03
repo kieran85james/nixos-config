@@ -20,20 +20,20 @@
       folder-children = [
         "System"
         "Utility"
-        "Office"
+        "Documents"
       ];
     };
     "org/gnome/desktop/app-folders/folders/System" = {
       name = "System";
       apps = [
+        "org.gnome.Terminal.desktop"
+        "org.gnome.SystemMonitor.desktop"
+        "org.gnome.Logs.desktop"
         "org.gnome.Settings.desktop"
-        "gnome-system-monitor.desktop"
         "org.gnome.baobab.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.gnome.Extensions.desktop"
         "org.gnome.tweaks.desktop"
-        "org.gnome.Terminal.desktop"
-        "org.gnome.Logs.desktop"
       ];
     };
     "org/gnome/desktop/app-folders/folders/Utility" = {
@@ -44,18 +44,16 @@
         "org.gnome.seahorse.Application.desktop"
         "protonvpn-app.desktop"
         "org.gnome.Connections.desktop"
-        "org.gnome.Evince.desktop"
         "org.gnome.FileRoller.desktop"
-        "simple-scan.desktop"
         "org.gnome.Weather.desktop"
         "org.gnome.font-viewer.desktop"
-        "cups.desktop"
         "org.gnome.Characters.desktop"
+        "cups.desktop"
         "yelp.desktop"
       ];
     };
-    "org/gnome/desktop/app-folders/folders/Office" = {
-      name = "Office";
+    "org/gnome/desktop/app-folders/folders/Documents" = {
+      name = "Documents";
       apps = [
         "startcenter.desktop"
         "writer.desktop"
@@ -64,6 +62,9 @@
         "base.desktop"
         "draw.desktop"
         "math.desktop"
+        "org.gnome.Evince.desktop"
+        "simple-scan.desktop"
+        "org.gnome.TextEditor.desktop"
       ];
     };
     "org/gnome/desktop/interface" = {
