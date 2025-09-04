@@ -32,6 +32,8 @@
 
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
+  virtualisation.libvirtd.enable = true;
+  boot.kernelModules = [ "kvm-intel" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

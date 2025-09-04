@@ -32,7 +32,10 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
   virtualisation.libvirtd.enable = true;
+  boot.kernelModules = [ "kvm-intel" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
