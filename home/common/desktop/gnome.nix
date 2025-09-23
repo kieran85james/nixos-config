@@ -75,6 +75,11 @@
     };
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
+      color-shading-type = "solid";
+      picture-uri = "file://${config.home.homeDirectory}/.dotfiles/home/common/desktop/wallpaper.jpg";
+      picture-uri-dark = "file://${config.home.homeDirectory}/.dotfiles/home/common/desktop/wallpaper.jpg";
+      primary-color = "#000000";
+      secondary-color = "#000000";
     };
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
