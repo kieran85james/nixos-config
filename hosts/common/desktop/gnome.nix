@@ -1,35 +1,35 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    excludePackages = with pkgs; [ xterm ];
+  services = {
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+    xserver = {
+      enable = true;
+      excludePackages = with pkgs; [ stable.xterm ];
+    };
   };
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Exclude GNOME packages.
   environment.gnome.excludePackages = with pkgs; [
-    epiphany
-    gnome-tour
-    gnome-console
-    gnome-maps
-    gnome-clocks
-    gnome-music
-    decibels
-    totem
+    stable.epiphany
+    stable.gnome-tour
+    stable.gnome-console
+    stable.gnome-maps
+    stable.gnome-clocks
+    stable.gnome-music
+    stable.decibels
+    stable.totem
   ];
 
   # GNOME packages.
   environment.systemPackages = with pkgs; [
-    gnome-boxes
-    gnome-terminal
-    gnome-tweaks
-    dconf-editor
-    gnome-online-accounts
+    stable.gnome-boxes
+    stable.gnome-terminal
+    stable.gnome-tweaks
+    stable.dconf-editor
+    stable.gnome-online-accounts # configure settings for this!
   ];
 
   # Enable programs.

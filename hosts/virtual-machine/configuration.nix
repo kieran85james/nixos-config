@@ -3,31 +3,16 @@
 {
   imports =
     [
+      ./disko-config.nix
       ./hardware-configuration.nix
-
-      ../common/base/nixos.nix
-      ../common/base/locale.nix
-      ../common/base/packages.nix
-
-      ../common/services/networkmanager.nix
-      # ../common/services/displaylink.nix
-      # ../common/services/tailscale.nix
-      ../common/services/pipewire.nix
-      ../common/services/cups.nix
-
-      ../common/desktop/packages.nix
-      ../common/desktop/gnome.nix
-      
-      ../common/users/kieran/default.nix
-      ../common/users/gemma/default.nix
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.device = "/dev/vda";
+  # boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "vm"; # Define your hostname.
+  networking.hostName = "virtual-machine"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   services.qemuGuest.enable = true;
@@ -45,5 +30,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }

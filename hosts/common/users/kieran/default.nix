@@ -1,19 +1,34 @@
 { pkgs, ... }:
+
 {
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.kieran = {
+    # Generate password hash with command `mkpasswd mysecretpassword`
+    # initialHashedPassword = "";
     isNormalUser = true;
-    description = "Kieran James";
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    description = "Kieran";
+    extraGroups = [
+      "wheel"
+      "docker"
+      "networkmanager"
+      "libvirtd"
+      "flatpak"
+      "audio"
+      "video"
+      "plugdev"
+      "input"
+      "kvm"
+      "qemu-libvirtd"
+    ];
+
     packages = with pkgs; [
-      firefox
-      vscode
-      jetbrains.phpstorm
-      dbeaver-bin
-      docker
-      docker-compose
-      # postman
-      slack
+      stable.firefox
+      stable.vscode
+      stable.jetbrains.phpstorm
+      stable.dbeaver-bin
+      # stable.postman
+      stable.slack
     ];
   };
+
+  nix.settings.trusted-users = [ "kieran" ];
 }

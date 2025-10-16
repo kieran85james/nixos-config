@@ -1,36 +1,23 @@
-{ pkgs, unstable, ... }:
+{ pkgs, ... }:
+
 {
   environment.systemPackages = (with pkgs; [
-    # agenix
-    colordiff
-    curl
-    git
-    htop
-    neofetch
-    p7zip
-    rsync
-    unrar
-    unzip
-    wget
-    wireguard-tools
-    zsh
-    php83
-    php83Packages.composer
-    php83Extensions.mbstring
-    mariadb
-    nodejs
-  ])
-
-  ++
-    
-  (with unstable; [
-    laravel
+    stable.colordiff
+    stable.curl
+    stable.git
+    stable.htop
+    stable.neofetch
+    stable.p7zip
+    stable.rsync
+    stable.unrar
+    stable.unzip
+    stable.wget
+    stable.nano
+    stable.wireguard-tools
   ]);
 
-  services.mysql = {
+  programs.nano = {
     enable = true;
-    package = unstable.mariadb;
+    syntaxHighlight = true;
   };
-
-  programs.npm.enable = true;
 }
