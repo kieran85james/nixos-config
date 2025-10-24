@@ -3,22 +3,25 @@
 {
   imports =
     [
-      ./disko-config.nix
+      # ./disko-config.nix
       ./hardware-configuration.nix
     ];
 
+  # TODO
+  # START:Remove - Once disko works properly.
   # Bootloader.
-  # boot.loader.grub.enable = true;
-  # boot.loader.grub.device = "/dev/vda";
-  # boot.loader.grub.useOSProber = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.useOSProber = true;
+  # END: Remove - Once disko works properly.
 
   networking.hostName = "virtual-machine"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
+  services.spice-webdavd.enable = true;
   virtualisation.libvirtd.enable = true;
-  boot.kernelModules = [ "kvm-intel" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
