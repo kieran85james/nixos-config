@@ -34,7 +34,6 @@
 
   virtualisation.libvirtd.enable = true;
   services.spice-vdagentd.enable = true;
-  boot.kernelModules = [ "kvm-intel" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
