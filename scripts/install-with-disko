@@ -16,14 +16,14 @@ if [[ -z "$TARGET_HOST" ]]; then
     exit 1
 fi
 
-if [ ! -e "host/${TARGET_HOST}/disks.nix" ]; then
-  echo "ERROR! $(basename "${0}") could not find the required host/${TARGET_HOST}/disks.nix"
+if [ ! -e "hosts/${TARGET_HOST}/disks.nix" ]; then
+  echo "ERROR! $(basename "${0}") could not find the required hosts/${TARGET_HOST}/disks.nix"
   exit 1
 fi
 
 # Check if the machine we're provisioning expects a keyfile to unlock a disk.
 # If it does, generate a new key, and write to a known location.
-if grep -q "data.keyfile" "host/${TARGET_HOST}/disks.nix"; then
+if grep -q "data.keyfile" "hosts/${TARGET_HOST}/disks.nix"; then
   echo -n "$(head -c32 /dev/random | base64)" > /tmp/data.keyfile
 fi
 
@@ -41,7 +41,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         --no-write-lock-file \
         -- \
         --mode zap_create_mount \
-        "host/${TARGET_HOST}/disks.nix"
+        "hosts/${TARGET_HOST}/disks.nix"
 
     sudo nixos-install --flake ".#${TARGET_HOST}"
 
