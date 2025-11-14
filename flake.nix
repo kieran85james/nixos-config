@@ -39,20 +39,28 @@
   in {
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
     overlays = import ./overlays {inherit inputs;};
-    # homeManagerModules = import ./modules/home-manager;
+    homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {
       # Virtual Machine
-      virtual-machine = nixpkgs.lib.nixosSystem {
+      fsociety = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
-          ./hosts/virtual-machine
+          ./hosts/fsociety
           inputs.disko.nixosModules.disko
           agenix.nixosModules.default
         ];
       };
 
       # Work
+      # e-corp = nixpkgs.lib.nixosSystem {
+      #   specialArgs = { inherit inputs outputs; };
+      #   modules = [
+      #     ./hosts/e-corp
+      #     inputs.disko.nixosModules.disko
+      #     agenix.nixosModules.default
+      #   ];
+      # };
 
       # Personal
       # darkarmy = lib.nixosSystem {
@@ -65,10 +73,10 @@
     };
     
     homeConfigurations = {
-      kieran = home-manager.lib.homeManagerConfiguration {
+      "phillip@e-corp" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit inputs outputs;};
-        modules = [ ./home.nix ];
+        modules = [ ./home/phillip ];
       };
     };
   };

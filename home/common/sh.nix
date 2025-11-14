@@ -58,7 +58,7 @@ let
     "nix-validate" = "nix flake check --show-trace";
     "nix-update" = "nix flake update";
     "nix-rebuild" = "sudo nixos-rebuild switch --flake .#$HOSTNAME && home-manager switch --flake .";
-    "nix-rebuild-vm" = "nixos-rebuild build-vm --flake .#virtual-machine";
+    "nix-rebuild-vm" = "nixos-rebuild build-vm --flake .#fsociety";
     "nix-switch-boot" = "/run/current-system/bin/switch-to-configuration boot";
     "nix-collect-garbage" = "nix-collect-garbage -d";
   };

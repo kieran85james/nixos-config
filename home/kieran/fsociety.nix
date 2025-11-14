@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "kieran";
-  home.homeDirectory = "/home/kieran";
+  home.username = "elliot"; # otto for darkarmy, phillip for e-corp & elliot for fsociety
+  home.homeDirectory = "/home/elliot";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -16,14 +16,14 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
   
   imports = [
-    ./home/common/sh.nix
-    ./home/common/desktop/gnome.nix
-    ./home/common/desktop/xdg.nix
+    ../common/sh.nix
+    ../common/desktop/gnome.nix
+    ../common/desktop/xdg.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -66,7 +66,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/kieran/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/elliot/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
@@ -74,14 +74,14 @@
 
   gtk.enable = true;
   gtk.gtk3.bookmarks = [
-    "file:///home/kieran/downloads Downloads"
-    "file:///home/kieran/media/documents Documents"
-    "file:///home/kieran/media/music Music"
-    "file:///home/kieran/media/pictures Pictures"
-    "file:///home/kieran/media/videos Videos"
-    "file:///home/kieran/projects Projects"
-    "file:///home/kieran/projects/personal Personal Projects"
-    "file:///home/kieran/projects/jobs/app APP Wholesale"
+    "file:///home/elliot/downloads Downloads"
+    "file:///home/elliot/media/documents Documents"
+    "file:///home/elliot/media/music Music"
+    "file:///home/elliot/media/pictures Pictures"
+    "file:///home/elliot/media/videos Videos"
+    "file:///home/elliot/projects Projects"
+    "file:///home/elliot/projects/personal Personal Projects"
+    "file:///home/elliot/projects/jobs/app APP Wholesale"
     "smb://ds923-plus/ DS923-PLUS"
   ];
 
