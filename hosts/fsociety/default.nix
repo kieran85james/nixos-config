@@ -1,3 +1,5 @@
+{ pkgs, lib, inputs, outputs, ... }:
+
 {
   imports = [
     ../common/base
