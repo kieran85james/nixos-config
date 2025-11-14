@@ -3,7 +3,9 @@
     ../common/base
     ../common/desktop
     ../common/extraServices
-    ../common/users
+
+    ../common/users/kieran.nix
+    ../common/users/gemma.nix
 
     ./configuration.nix
     # ./secrets.nix
