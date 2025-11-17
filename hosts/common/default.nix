@@ -5,9 +5,7 @@
   outputs,
   ...
 }: {
-  imports = [
-    builtins.attrValues outputs.nixosModules;
-  ];
+  imports = builtins.attrValues outputs.nixosModules ++ [];
 
   nixpkgs = {
     config.allowUnfree = true;
