@@ -2,13 +2,15 @@
 
 {
   imports = [
+    ../common
     ../common/base
     ../common/desktop
     ../common/extraServices
 
+    ./services
+    ./packages.nix
     ./configuration.nix
     # ./secrets.nix
-    ./services
 
     ../common/users/kieran.nix
     ../common/users/gemma.nix
@@ -17,5 +19,4 @@
   
   extraServices.displaylink.enable = false;
   extraServices.docker.enable = false;
-  extraServices.tailscale.enable = false;
 }

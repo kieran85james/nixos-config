@@ -1,5 +1,7 @@
 {
   imports = [
-    # ./example.nix
+    ./printing.nix
+    ./sound.nix
+    ./tailscale.nix
   ];
 }

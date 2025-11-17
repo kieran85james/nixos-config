@@ -40,6 +40,7 @@
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
     overlays = import ./overlays {inherit inputs;};
     homeManagerModules = import ./modules/home-manager;
+    nixosModules = import ./modules/nixos;
 
     nixosConfigurations = {
       # Virtual Machine
@@ -53,30 +54,34 @@
       };
 
       # Work
-      # e-corp = nixpkgs.lib.nixosSystem {
-      #   specialArgs = { inherit inputs outputs; };
-      #   modules = [
-      #     ./hosts/e-corp
-      #     inputs.disko.nixosModules.disko
-      #     agenix.nixosModules.default
-      #   ];
-      # };
+      e-corp = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/e-corp
+          inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
+        ];
+      };
 
       # Personal
-      # darkarmy = lib.nixosSystem {
-      #   inherit system;
-      #   specialArgs = {
-      #     inherit unstable;
-      #   };
-      #   modules = [ ./hosts/darkarmy/configuration.nix ];
-      # };
+      darkarmy = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/darkarmy
+          inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
+        ];
+      };
     };
     
     homeConfigurations = {
       "phillip@e-corp" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [ ./home/phillip ];
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          hostname = "e-corp";
+        };
+        modules = [ ./home/kieran/e-corp.nix ];
       };
     };
   };

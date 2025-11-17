@@ -5,21 +5,10 @@
   outputs,
   ...
 }: {
-  nix = {
-    settings = {
-        trusted-users = [ "root" ];
-        experimental-features = [ "nix-command" "flakes" ];
-        warn-dirty = false;
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 30d";
-    };
-    optimise.automatic = true;
-  };
+  imports = [
+    inputs.gnome.nixosModules.default
+  ];
 
-  # Allow unfree packages
   nixpkgs = {
     config.allowUnfree = true;
 
@@ -39,6 +28,20 @@
       #   });
       # })
     ];
+  };
+
+  nix = {
+    settings = {
+      trusted-users = [ "root" ];
+      experimental-features = ["nix-command" "flakes"];
+      warn-dirty = false;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+    optimise.automatic = true;
   };
 
   # Remove NixOS documentation icon
