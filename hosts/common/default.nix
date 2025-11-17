@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    outputs.nixosModules.gnome
+    builtins.attrValues outputs.nixosModules;
   ];
 
   nixpkgs = {
