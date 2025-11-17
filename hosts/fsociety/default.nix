@@ -4,7 +4,6 @@
   imports = [
     ../common
     ../common/base
-    ../common/desktop
     ../common/extraServices
 
     ./services
