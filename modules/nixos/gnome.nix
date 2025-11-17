@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.extraServices.gnome;
+  cfg = config.nixosModules.gnome;
 in {
-  options.extraServices.gnome.enable = mkEnableOption "enable gnome";
+  options.nixosModules.gnome.enable = mkEnableOption "enable gnome";
 
   config = mkIf cfg.enable {
     # Enable the X11 windowing system.

@@ -1,3 +1,3 @@
 {
-  module = import ./gnome.nix;
+  gnome = import ./gnome.nix;
 }

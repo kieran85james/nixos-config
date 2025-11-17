@@ -17,6 +17,8 @@
     inputs.home-manager.nixosModules.home-manager
   ];
   
+  nixosModules.gnome.enable = true;
+
   extraServices.displaylink.enable = false;
   extraServices.docker.enable = false;
 }
