@@ -7,5 +7,13 @@
   services = {
     printing.enable = true;
     gvfs.enable = true;
+
+    # Enable touchpad support (enabled default in most desktopManager).
+    xserver.libinput.enable = true;
+
+    # Guest virtual machine services.
+    qemuGuest.enable = true;
+    spice-vdagentd.enable = true;
+    spice-webdavd.enable = true;
   };
 }

@@ -13,14 +13,6 @@
 
   networking.hostName = "fsociety";
 
-  # Guest virtual machine services.
-  services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true;
-  services.spice-webdavd.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
