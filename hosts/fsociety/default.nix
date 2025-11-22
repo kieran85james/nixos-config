@@ -3,17 +3,15 @@
 {
   imports = [
     ../common
-    ../common/base
     ../common/extraServices
-
+    ../common/users/kieran.nix
+    ../common/users/gemma.nix
+    inputs.home-manager.nixosModules.home-manager
+    
     ./services
     ./packages.nix
     ./configuration.nix
     # ./secrets.nix
-
-    ../common/users/kieran.nix
-    ../common/users/gemma.nix
-    inputs.home-manager.nixosModules.home-manager
   ];
   
   nixosModules.gnome.enable = true;

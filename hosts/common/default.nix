@@ -5,7 +5,11 @@
   outputs,
   ...
 }: {
-  imports = builtins.attrValues outputs.nixosModules ++ [];
+  imports = builtins.attrValues outputs.nixosModules ++ [
+    ./locale.nix
+    ./networkmanager.nix
+    ./packages.nix
+  ];
 
   nixpkgs = {
     config.allowUnfree = true;

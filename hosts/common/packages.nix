@@ -12,7 +12,6 @@
     stable.unrar
     stable.unzip
     stable.wget
-    stable.nano
     stable.wireguard-tools
   ]);
 
