@@ -87,9 +87,9 @@
 
   programs.git = {
     enable = true;
-    userName = "Kieran James";
-    userEmail = "kieran85james@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "Kieran James";
+      user.email = "kieran85james@gmail.com";
       init.defaultBranch = "main";
     };
     includes = [{

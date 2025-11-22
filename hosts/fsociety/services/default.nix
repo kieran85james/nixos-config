@@ -9,7 +9,7 @@
     gvfs.enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
-    xserver.libinput.enable = true;
+    libinput.enable = true;
 
     # Guest virtual machine services.
     qemuGuest.enable = true;
