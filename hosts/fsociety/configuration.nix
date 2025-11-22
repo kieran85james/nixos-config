@@ -13,10 +13,10 @@
 
   networking.hostName = "fsociety";
 
+  # Guest virtual machine services.
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
   services.spice-webdavd.enable = true;
-  virtualisation.libvirtd.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;

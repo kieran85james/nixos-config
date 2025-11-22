@@ -18,4 +18,6 @@
 
   extraServices.displaylink.enable = false;
   extraServices.docker.enable = false;
+  extraServices.flatpak.enable = false;
+  extraServices.virtualisation.enable = false;
 }
