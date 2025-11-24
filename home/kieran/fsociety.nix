@@ -6,6 +6,7 @@
   
   imports = [
     ../common
+    ../features/cli
     ./dotfiles
     ./home.nix
   ];

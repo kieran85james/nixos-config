@@ -22,7 +22,6 @@
     self,
     agenix,
     nixpkgs,
-    nixpkgs-stable,
     nix-darwin,
     home-manager,
     ...
@@ -38,7 +37,7 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    overlays = import ./overlays {inherit inputs;};
+    overlays = import ./overlays {inherit inputs outputs;};
     homeManagerModules = import ./modules/home-manager;
     nixosModules = import ./modules/nixos;
 
