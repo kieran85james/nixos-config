@@ -1,13 +1,13 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 let
   browser = ["google-chrome.desktop"];
   archiveManager = ["org.gnome.FileRoller.desktop"];
   imageViewer = ["org.gnome.Loupe.desktop"];
 in {
-
   xdg = {
     enable = true;
+    configFile."mimeapps.list".force = true;
     userDirs = {
       enable = true;
       createDirectories = true;
@@ -105,5 +105,4 @@ in {
       };
     };
   };
-
 }
