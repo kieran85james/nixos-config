@@ -34,7 +34,6 @@ in {
 
     # GNOME packages.
     environment.systemPackages = with pkgs; [
-      stable.gnome-boxes
       stable.gnome-terminal
       stable.gnome-tweaks
       stable.dconf-editor
