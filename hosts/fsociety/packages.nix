@@ -13,7 +13,6 @@
     stable.steam
     stable.ferdium
     stable.cryptomator
-    stable.fira-mono
     stable.protonvpn-gui
     stable.php83
     stable.php83Packages.composer

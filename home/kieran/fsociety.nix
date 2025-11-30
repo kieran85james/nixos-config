@@ -6,7 +6,10 @@
   
   imports = [
     ../common
+
     ../features/cli
+    ../features/desktop
+    
     ./dotfiles
     ./home.nix
   ];
@@ -16,16 +19,13 @@
 
   # Enable Home Manager features
   features.cli.bash.enable = true;
+
+  features.desktop.xdg.enable = true;
+  features.desktop.fonts.enable = true;
+  features.desktop.coding.enable = true;
   
   # Install packages for this user only
-  home.packages = with pkgs; [
-    stable.firefox
-    stable.vscode
-    stable.jetbrains.phpstorm
-    stable.dbeaver-bin
-    stable.postman
-    stable.slack
-  ];
+  home.packages = with pkgs; [];
 
   gtk.enable = true;
   gtk.gtk3.bookmarks = [
