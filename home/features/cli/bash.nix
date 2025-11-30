@@ -72,7 +72,7 @@ with lib; let
     "nfc" = "nix flake check --show-trace";
 
     "nr" = "sudo nixos-rebuild --flake .";
-    "nrs" = "sudo nixos-rebuild switch --flake .#(uname -n)";
+    "nrs" = "sudo nixos-rebuild switch --flake .#$(uname -n)";
     "nrvm" = "nixos-rebuild build-vm --flake .#fsociety";
     "snr" = "sudo nixos-rebuild --flake .";
     "snrs" = "sudo nixos-rebuild --flake . switch";
