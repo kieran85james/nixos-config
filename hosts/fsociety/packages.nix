@@ -15,7 +15,6 @@
     stable.cryptomator
     stable.fira-mono
     stable.protonvpn-gui
-    stable.gparted
     stable.php83
     stable.php83Packages.composer
     stable.php83Extensions.mbstring

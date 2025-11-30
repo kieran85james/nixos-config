@@ -23,7 +23,6 @@ in {
     programs.virt-manager.enable = true;
     environment.systemPackages = (with pkgs; [
       qemu
-      qemu-libvirtd
       qemu-utils
       spice-gtk
       spice-protocol
