@@ -4,6 +4,8 @@ let
   browser = ["google-chrome.desktop"];
   archiveManager = ["org.gnome.FileRoller.desktop"];
   imageViewer = ["org.gnome.Loupe.desktop"];
+  audioPlayer = ["org.gnome.Rhythmbox3.desktop"];
+  videoPlayer = ["vlc.desktop"];
 in {
   xdg = {
     enable = true;
@@ -20,12 +22,9 @@ in {
       desktop = null;
       publicShare = "${config.home.homeDirectory}/public";
       extraConfig = {
-        XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
         XDG_BOOK_DIR = "${config.home.homeDirectory}/media/books";
         XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
         XDG_JOBS_DIR = "${config.home.homeDirectory}/projects/jobs";
-        XDG_APP_DIR = "${config.home.homeDirectory}/projects/jobs/app";
-        XDG_APP_BAKS_DIR = "${config.home.homeDirectory}/projects/jobs/app/backups";
         XDG_PERSONAL_DIR = "${config.home.homeDirectory}/projects/personal";
       };
     };
@@ -47,8 +46,8 @@ in {
         "x-scheme-handler/unknown" = browser;
         "x-scheme-handler/spotify" = ["spotify.desktop"];
 
-        "audio/*" = ["org.gnome.Totem.dekstop"];
-        "video/*" = ["org.gnome.Totem.dekstop"];
+        "audio/*" = audioPlayer;
+        "video/*" = videoPlayer;
         "image/*" = imageViewer;
 
         "application/json" = browser;
