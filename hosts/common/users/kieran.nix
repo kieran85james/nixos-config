@@ -25,14 +25,8 @@ in
       "kvm"
       "qemu-libvirtd"
     ];
-
-    packages = with pkgs; [
-      stable.firefox
-      stable.vscode
-      stable.jetbrains.phpstorm
-      stable.dbeaver-bin
-      # stable.postman
-      stable.slack
+    packages = [
+      inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 

@@ -18,7 +18,14 @@
   features.cli.bash.enable = true;
   
   # Install packages for this user only
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [
+    stable.firefox
+    stable.vscode
+    stable.jetbrains.phpstorm
+    stable.dbeaver-bin
+    stable.postman
+    stable.slack
+  ];
 
   gtk.enable = true;
   gtk.gtk3.bookmarks = [
