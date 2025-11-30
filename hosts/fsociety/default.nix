@@ -3,7 +3,6 @@
 {
   imports = [
     ../common
-    ../common/extraServices
     ../common/users/kieran.nix
     ../common/users/gemma.nix
     inputs.home-manager.nixosModules.home-manager

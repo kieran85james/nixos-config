@@ -9,6 +9,7 @@
     ./locale.nix
     ./networkmanager.nix
     ./packages.nix
+    ./extraServices
   ];
 
   home-manager = {

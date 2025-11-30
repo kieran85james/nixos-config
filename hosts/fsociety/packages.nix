@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = (with pkgs; [
+    joplin-desktop
     stable.bitwarden
     stable.google-chrome
     stable.libreoffice
@@ -14,19 +15,12 @@
     stable.cryptomator
     stable.fira-mono
     stable.protonvpn-gui
-    stable.qemu_full
-    stable.qemu_kvm
-    stable.qemu-utils
-    stable.spice-gtk
-    stable.spice-protocol
-    stable.spice-vdagent
-    # stable.gparted
+    stable.gparted
     stable.php83
     stable.php83Packages.composer
     stable.php83Extensions.mbstring
     stable.mariadb
     stable.nodejs
-    joplin-desktop
     laravel
   ]);
 

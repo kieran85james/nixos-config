@@ -21,8 +21,13 @@ in {
       };
     };
     programs.virt-manager.enable = true;
-    environment = {
-      systemPackages = [pkgs.qemu];
-    };
+    environment.systemPackages = (with pkgs; [
+      qemu
+      qemu-libvirtd
+      qemu-utils
+      spice-gtk
+      spice-protocol
+      spice-vdagent
+    ]);
   };
 }
