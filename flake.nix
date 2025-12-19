@@ -22,7 +22,6 @@
     self,
     agenix,
     nixpkgs,
-    nixpkgs-stable,
     nix-darwin,
     home-manager,
     ...
@@ -38,37 +37,50 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    overlays = import ./overlays {inherit inputs;};
-    # homeManagerModules = import ./modules/home-manager;
+    overlays = import ./overlays {inherit inputs outputs;};
+    homeManagerModules = import ./modules/home-manager;
+    nixosModules = import ./modules/nixos;
 
     nixosConfigurations = {
       # Virtual Machine
-      virtual-machine = nixpkgs.lib.nixosSystem {
+      fsociety = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
-          ./hosts/virtual-machine
+          ./hosts/fsociety
           inputs.disko.nixosModules.disko
           agenix.nixosModules.default
         ];
       };
 
       # Work
+      e-corp = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/e-corp
+          inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
+        ];
+      };
 
       # Personal
-      # darkarmy = lib.nixosSystem {
-      #   inherit system;
-      #   specialArgs = {
-      #     inherit unstable;
-      #   };
-      #   modules = [ ./hosts/darkarmy/configuration.nix ];
-      # };
+      darkarmy = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/darkarmy
+          inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
+        ];
+      };
     };
     
     homeConfigurations = {
-      kieran = home-manager.lib.homeManagerConfiguration {
+      "phillip@e-corp" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [ ./home.nix ];
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          hostname = "e-corp";
+        };
+        modules = [ ./home/kieran/e-corp.nix ];
       };
     };
   };

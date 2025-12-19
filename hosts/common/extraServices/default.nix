@@ -2,6 +2,7 @@
   imports = [
     ./displaylink.nix
     ./docker.nix
-    ./tailscale.nix
+    ./flatpak.nix
+    ./virtualisation.nix
   ];
 }
