@@ -21,22 +21,10 @@
   features.cli.bash.enable = true;
 
   features.desktop.xdg.enable = true;
+  features.desktop.gtk.enable = true;
   features.desktop.fonts.enable = true;
   features.desktop.coding.enable = true;
   
   # Install packages for this user only
   home.packages = with pkgs; [];
-
-  gtk.enable = true;
-  gtk.gtk3.bookmarks = [
-    "file:///home/elliot/downloads Downloads"
-    "file:///home/elliot/media/documents Documents"
-    "file:///home/elliot/media/music Music"
-    "file:///home/elliot/media/pictures Pictures"
-    "file:///home/elliot/media/videos Videos"
-    "file:///home/elliot/projects Projects"
-    "file:///home/elliot/projects/personal Personal Projects"
-    "file:///home/elliot/projects/jobs/app APP Wholesale"
-    "smb://ds923-plus/ DS923-PLUS"
-  ];
 }
