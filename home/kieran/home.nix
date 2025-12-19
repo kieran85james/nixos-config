@@ -61,6 +61,7 @@
     # EDITOR = "emacs";
   };
 
+  # Git config
   programs.git = {
     enable = true;
     settings = {
@@ -77,14 +78,17 @@
     }];
   };
 
-  # to enable ssh and configer .ssh/config file
-  # programs.ssh.enable = true;
-  # programs.ssh.matchBlocks = {
-  #   "john.example.com" = {
-  #     hostname = "example.com";
-  #     user = "john";
-  #   };
-  # };
+  # SSH config
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+        user = "kieran85james";
+        port = 22;
+        identityFile = "~/.ssh/github";
+      };
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
