@@ -8,10 +8,28 @@
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "sr_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
+  boot {
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
+    initrd.availableKernelModules = [
+      "ahci"
+      "xhci_pci"
+      "sr_mod"
+    ];
+    initrd.kernelModules = [ ];
+    kernelModules = [ ];
+    kernelParams = [
+      "quiet"
+      "splash"
+      "intremap=on"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
+    extraModulePackages = [ ];
+    plymouth.enable = true;
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
