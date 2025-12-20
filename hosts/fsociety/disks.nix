@@ -7,6 +7,7 @@
         content = {
           type = "gpt";
           partitions = {
+
             ESP = {
               size = "512M";
               type = "EF00";
@@ -17,17 +18,19 @@
                 mountOptions = [ "umask=0077" ];
               };
             };
+
             luks = {
               size = "100%";
               content = {
                 type = "luks";
                 name = "crypted";
+
                 # disable settings.keyFile if you want to use interactive password entry
                 #passwordFile = "/tmp/secret.key"; # Interactive
+                
                 settings = {
-                  # Make sure there is no trailing newline in keyfile if used for interactive unlock.
-                  # Use `echo -n "password" > /tmp/secret.key`
                   allowDiscards = true;
+                  # Use `echo -n "password" > /tmp/secret.key`
                   #keyFile = "/tmp/data.keyfile";
                 };
                 
@@ -67,6 +70,7 @@
                 };
               };
             };
+
           };
         };
       };
