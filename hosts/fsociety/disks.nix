@@ -25,10 +25,15 @@
                 # disable settings.keyFile if you want to use interactive password entry
                 #passwordFile = "/tmp/secret.key"; # Interactive
                 settings = {
+                  # Make sure there is no trailing newline in keyfile if used for interactive unlock.
+                  # Use `echo -n "password" > /tmp/secret.key`
                   allowDiscards = true;
-                  keyFile = "/tmp/secret.key";
+                  keyFile = "/tmp/data.keyfile";
                 };
-                additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
+                
+                # Don't try to unlock this drive early in the boot.
+                initrdUnlock = false;
+
                 content = {
                   type = "btrfs";
                   extraArgs = [ "-f" ];
