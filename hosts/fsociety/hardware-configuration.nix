@@ -8,7 +8,7 @@
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot {
+  boot = {
     consoleLogLevel = 3;
     initrd.verbose = false;
     initrd.systemd.enable = true;
