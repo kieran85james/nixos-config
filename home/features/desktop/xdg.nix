@@ -34,6 +34,7 @@ in {
           XDG_BOOK_DIR = "${config.home.homeDirectory}/media/books";
           XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
           XDG_JOBS_DIR = "${config.home.homeDirectory}/projects/jobs";
+          XDG_APP_DIR = "${config.home.homeDirectory}/projects/jobs/app";
           XDG_PERSONAL_DIR = "${config.home.homeDirectory}/projects/personal";
         };
       };
