@@ -88,6 +88,7 @@
         port = 22;
         identityFile = "~/.ssh/github";
       };
+    };
   };
 
   # Let Home Manager install and manage itself.

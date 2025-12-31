@@ -2,6 +2,7 @@
   imports = [
     ./sound.nix
     ./tailscale.nix
+    ./displaymanager.nix
   ];
 
   services = {
