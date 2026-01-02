@@ -37,7 +37,7 @@ in {
       stable.gnome-terminal
       stable.gnome-tweaks
       stable.dconf-editor
-      stable.gnome-online-accounts # configure settings for this!
+      stable.gnome-online-accounts
     ];
 
     # Enable programs.
