@@ -20,8 +20,8 @@
   # Enable Home Manager features
   features.cli.bash.enable = true;
 
-  features.desktop.xdg.enable = true;
-  features.desktop.gtk.enable = true;
+  features.desktop.xdg.enable = false;
+  features.desktop.gtk.enable = false;
   features.desktop.fonts.enable = false;
   features.desktop.coding.enable = false;
   
