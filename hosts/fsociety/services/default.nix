@@ -1,8 +1,9 @@
 {
   imports = [
+    ./displaymanager.nix
+    ./openssh.nix
     ./sound.nix
     ./tailscale.nix
-    ./displaymanager.nix
   ];
 
   services = {

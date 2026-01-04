@@ -1,9 +1,9 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   users.users.darlene = {
     # Generate password hash with command `mkpasswd mysecretpassword`
-    initialHashedPassword = "$y$j9T$2dR1Z8nl.g9YjD/Acnp84.$krbE0QynKn6NiSDjA2WGuqCScYsZhH.WezG8nDMaRZ3";
+    hashedPasswordFile = config.age.secrets.passwdhash-gemma.path;
     isNormalUser = true;
     description = "Gemma";
     extraGroups = [
