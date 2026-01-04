@@ -10,7 +10,7 @@
     ./services
     ./packages.nix
     ./configuration.nix
-    # ./secrets.nix
+    ./secrets.nix
   ];
   
   nixosModules.gnome.enable = true;
