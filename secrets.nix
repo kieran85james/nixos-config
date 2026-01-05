@@ -9,7 +9,7 @@ let
   
   users = [ kieran ];
 in {
-  # "secrets/passwdhash-kieran.age".publicKeys = systems ++ users;
+  "secrets/passwdhash-kieran.age".publicKeys = systems ++ users;
   "secrets/passwdhash-gemma.age".publicKeys = systems ++ users;
   # "secrets/ssh-config.age".publicKeys = systems ++ users;
 }
