@@ -1,7 +1,7 @@
 {
   imports = [
     ./displaymanager.nix
-    ./openssh.nix
+    # ./openssh.nix
     ./sound.nix
     ./tailscale.nix
   ];
