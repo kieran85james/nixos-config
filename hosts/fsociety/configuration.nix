@@ -13,6 +13,9 @@
 
   networking.hostName = "fsociety";
 
+  # Only defined users can exist on the system.
+  users.mutableUsers = false;
+
   # Required for agenix if OpenSSH is disabled.
   age.identityPaths = [ "/home/elliot/.ssh/kieran" ];
 
