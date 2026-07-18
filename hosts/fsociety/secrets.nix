@@ -1,3 +1,11 @@
+{ config, ... }:
+
+let
+  # Dynamically determine the username based on the hostname
+  dynamicUser = if config.networking.hostName == "e-corp" then "phillip"
+                else if config.networking.hostName == "darkarmy" then "otto"
+                else "elliot";
+in
 {
   age = {
     # Required for agenix if OpenSSH is disabled.
@@ -5,6 +13,10 @@
     secrets = {
       passwdhash-kieran = {
         file = ../../secrets/passwdhash-kieran.age;
+      };
+      ssh-config-kieran = {
+        file = ../../secrets/ssh-config-kieran.age;
+        owner = ${dynamicUser};
       };
       passwdhash-gemma = {
         file = ../../secrets/passwdhash-gemma.age;

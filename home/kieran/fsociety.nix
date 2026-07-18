@@ -12,7 +12,6 @@
     
     ./dotfiles
     ./home.nix
-    ./secrets.nix
   ];
 
   # Enable Home Manager modules
@@ -27,7 +26,7 @@
   features.desktop.coding.enable = true;
 
   # Add extra SSH config
-  programs.ssh.extraConfig = config.age.secrets.ssh-config-kieran.path;
+  programs.ssh.extraConfig = "/run/agenix/ssh-config-kieran";
   
   # Install packages for this user only
   home.packages = with pkgs; [];
