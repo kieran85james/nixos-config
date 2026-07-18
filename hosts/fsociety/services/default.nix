@@ -1,8 +1,8 @@
 {
   imports = [
+    ./displaymanager.nix
     ./sound.nix
     ./tailscale.nix
-    ./displaymanager.nix
   ];
 
   services = {

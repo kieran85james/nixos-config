@@ -10,9 +10,11 @@
     ./services
     ./packages.nix
     ./configuration.nix
-    # ./secrets.nix
+    ./secrets.nix
   ];
   
+  users.mutableUsers = false;
+
   nixosModules.gnome.enable = true;
 
   extraServices.displaylink.enable = false;
