@@ -1,6 +1,6 @@
 let
   # SYSTEMS
-    fsociety = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8F2M3WATph6vdRsTmP1VbRCdBoP1Ra2LOvfU2tYjMj";
+  fsociety = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8F2M3WATph6vdRsTmP1VbRCdBoP1Ra2LOvfU2tYjMj";
 
   systems = [ fsociety ];
 
