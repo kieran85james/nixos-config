@@ -88,8 +88,8 @@
         port = 22;
         identityFile = "~/.ssh/github";
       };
-      extraConfig = "Include /run/agenix/ssh-config-kieran";
     };
+    extraConfig = "Include /run/agenix/ssh-config-kieran";
   };
 
   # Let Home Manager install and manage itself.
