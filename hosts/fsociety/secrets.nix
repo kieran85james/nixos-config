@@ -9,8 +9,13 @@ in
 {
   age = {
     # Required for agenix if OpenSSH is disabled.
-    identityPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+    identityPaths = [
+      "/etc/ssh/ssh_host_ed25519_key"
+      "/home/${dynamicUser}/.ssh/kieran"
+    ];
+
     secrets = {
+      # Kieran
       passwdhash-kieran = {
         file = ../../secrets/passwdhash-kieran.age;
       };
@@ -18,6 +23,8 @@ in
         file = ../../secrets/ssh-config-kieran.age;
         owner = "${dynamicUser}";
       };
+      
+      # Gemma
       passwdhash-gemma = {
         file = ../../secrets/passwdhash-gemma.age;
       };
