@@ -26,10 +26,7 @@
   features.desktop.coding.enable = true;
 
   # Add extra SSH config
-  programs.ssh.extraConfig = ''
-  
-    Include /run/agenix/ssh-config-kieran
-  '';
+  programs.ssh.extraConfig = "Include /run/agenix/ssh-config-kieran";
   
   # Install packages for this user only
   home.packages = with pkgs; [];
