@@ -24,6 +24,9 @@
   features.desktop.gtk.enable = true;
   features.desktop.fonts.enable = true;
   features.desktop.coding.enable = true;
+
+  # Add extra SSH config
+  programs.ssh.extraConfig = config.age.secrets.ssh-config-kieran.path;
   
   # Install packages for this user only
   home.packages = with pkgs; [];
