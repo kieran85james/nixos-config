@@ -12,6 +12,7 @@
     
     ./dotfiles
     ./home.nix
+    ./secrets.nix
   ];
 
   # Enable Home Manager modules
