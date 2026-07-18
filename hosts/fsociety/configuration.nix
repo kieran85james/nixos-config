@@ -13,12 +13,6 @@
 
   networking.hostName = "fsociety";
 
-  # Only defined users can exist on the system.
-  users.mutableUsers = false;
-
-  # Required for agenix if OpenSSH is disabled.
-  age.identityPaths = [ "/home/elliot/.ssh/kieran" ];
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
