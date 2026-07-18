@@ -16,7 +16,7 @@ in
       };
       ssh-config-kieran = {
         file = ../../secrets/ssh-config-kieran.age;
-        owner = ${dynamicUser};
+        owner = "${dynamicUser}";
       };
       passwdhash-gemma = {
         file = ../../secrets/passwdhash-gemma.age;
