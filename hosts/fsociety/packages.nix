@@ -2,7 +2,7 @@
 {
   environment.systemPackages = (with pkgs; [
     joplin-desktop
-    stable.bitwarden
+    stable.bitwarden-desktop
     stable.google-chrome
     stable.libreoffice
     stable.spotify
@@ -13,7 +13,7 @@
     stable.steam
     stable.ferdium
     stable.cryptomator
-    stable.protonvpn-gui
+    stable.proton-vpn
     stable.php83
     stable.php83Packages.composer
     stable.php83Extensions.mbstring

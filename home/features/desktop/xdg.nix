@@ -21,6 +21,7 @@ in {
       configFile."mimeapps.list".force = true;
       userDirs = {
         enable = true;
+        setSessionVariables = false;
         createDirectories = true;
         music = "${config.home.homeDirectory}/media/music";
         videos = "${config.home.homeDirectory}/media/videos";
@@ -31,11 +32,11 @@ in {
         desktop = null;
         publicShare = "${config.home.homeDirectory}/public";
         extraConfig = {
-          XDG_BOOK_DIR = "${config.home.homeDirectory}/media/books";
-          XDG_PROJECTS_DIR = "${config.home.homeDirectory}/projects";
-          XDG_JOBS_DIR = "${config.home.homeDirectory}/projects/jobs";
-          XDG_APP_DIR = "${config.home.homeDirectory}/projects/jobs/app";
-          XDG_PERSONAL_DIR = "${config.home.homeDirectory}/projects/personal";
+          BOOKS = "${config.home.homeDirectory}/media/books";
+          PROJECTS = "${config.home.homeDirectory}/projects";
+          JOBS = "${config.home.homeDirectory}/projects/jobs";
+          APP = "${config.home.homeDirectory}/projects/jobs/app";
+          PERSONAL = "${config.home.homeDirectory}/projects/personal";
         };
       };
       mimeApps = {

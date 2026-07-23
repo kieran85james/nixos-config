@@ -110,10 +110,10 @@ in {
 
         # Show system information at login
         if [ -t 0 ]; then
-            if type -p "neofetch" > /dev/null; then
-                neofetch
+            if type -p "fastfetch" > /dev/null; then
+                fastfetch
             else
-                echo "Warning: neofetch was called, but it's not installed."
+                echo "Warning: fastfetch was called, but it's not installed."
             fi
         fi
 
