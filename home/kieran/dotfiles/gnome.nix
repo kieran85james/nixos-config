@@ -48,7 +48,7 @@ in mkIf cfg.enable {
         "htop.desktop"
         "ca.desrt.dconf-editor.desktop"
         "org.gnome.seahorse.Application.desktop"
-        "protonvpn-app.desktop"
+        "proton.vpn.app.gtk.desktop"
         "org.gnome.Connections.desktop"
         "org.gnome.FileRoller.desktop"
         "org.gnome.Calculator.desktop"

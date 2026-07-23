@@ -6,7 +6,7 @@
     stable.curl
     stable.git
     stable.htop
-    stable.neofetch
+    stable.fastfetch
     stable.p7zip
     stable.rsync
     stable.unrar
