@@ -22,6 +22,36 @@ in
       ssh-config-kieran = {
         file = ../../secrets/ssh-config-kieran.age;
         owner = "${dynamicUser}";
+        group = "users";
+        mode = "0600";
+      };
+      ssh-github-authentication-public-kieran = {
+        file = ../../secrets/ssh-github-authentication-public-kieran.age;
+        owner = "${dynamicUser}";
+        group = "users";
+        mode = "0644";
+        path = "/home/${dynamicUser}/.ssh/github_authentication.pub";
+      };
+      ssh-github-authentication-private-kieran = {
+        file = ../../secrets/ssh-github-authentication-private-kieran.age;
+        owner = "${dynamicUser}";
+        group = "users";
+        mode = "0600";
+        path = "/home/${dynamicUser}/.ssh/github_authentication";
+      };
+      ssh-github-signing-public-kieran = {
+        file = ../../secrets/ssh-github-signing-public-kieran.age;
+        owner = "${dynamicUser}";
+        group = "users";
+        mode = "0644";
+        path = "/home/${dynamicUser}/.ssh/github_signing.pub";
+      };
+      ssh-github-signing-private-kieran = {
+        file = ../../secrets/ssh-github-signing-private-kieran.age;
+        owner = "${dynamicUser}";
+        group = "users";
+        mode = "0600";
+        path = "/home/${dynamicUser}/.ssh/github_signing";
       };
       
       # Gemma

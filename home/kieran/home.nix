@@ -99,7 +99,7 @@
         hostname = "github.com";
         user = "kieran85james";
         port = 22;
-        identityFile = "~/.ssh/github";
+        identityFile = "~/.ssh/github_authentication";
       };
     };
     extraConfig = "Include /run/agenix/ssh-config-kieran";
