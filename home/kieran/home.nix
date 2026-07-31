@@ -64,18 +64,14 @@
   # Git config
   programs.git = {
     enable = true;
+    signing.format = "ssh";
+    signing.signByDefault = true;
+    signing.key = "~/.ssh/github_signing";
     settings = {
       user.name = "Kieran James";
-      user.email = "kieran85james@gmail.com";
+      user.email = "49641524+kieran85james@users.noreply.github.com";
       init.defaultBranch = "main";
     };
-    includes = [{
-      condition = "gitdir:${config.home.homeDirectory}/projects/jobs/app/";
-      contents = {
-        user.name = "Kieran James";
-        user.email = "kieran.james@appwholesaleltd.co.uk";
-      };
-    }];
   };
 
   # SSH config
@@ -99,7 +95,7 @@
         hostname = "github.com";
         user = "kieran85james";
         port = 22;
-        identityFile = "~/.ssh/github";
+        identityFile = "~/.ssh/github_authentication";
       };
     };
     extraConfig = "Include /run/agenix/ssh-config-kieran";

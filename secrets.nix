@@ -11,6 +11,10 @@ let
 in {
   "secrets/passwdhash-kieran.age".publicKeys = systems ++ users;
   "secrets/ssh-config-kieran.age".publicKeys = systems ++ users;
+  "secrets/ssh-github-authentication-public-kieran.age".publicKeys = systems ++ users;
+  "secrets/ssh-github-authentication-private-kieran.age".publicKeys = systems ++ users;
+  "secrets/ssh-github-signing-public-kieran.age".publicKeys = systems ++ users;
+  "secrets/ssh-github-signing-private-kieran.age".publicKeys = systems ++ users;
   
   "secrets/passwdhash-gemma.age".publicKeys = systems ++ users;
 }
