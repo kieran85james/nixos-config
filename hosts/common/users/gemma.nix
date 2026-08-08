@@ -3,7 +3,7 @@
 {
   users.users.darlene = {
     # Generate password hash with command `mkpasswd mysecretpassword`
-    hashedPasswordFile = config.age.secrets.passwdhash-gemma.path;
+    hashedPasswordFile = config.age.secrets.gemma-passwdhash.path;
     isNormalUser = true;
     description = "Gemma";
     extraGroups = [

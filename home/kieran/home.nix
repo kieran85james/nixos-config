@@ -66,7 +66,7 @@
     enable = true;
     signing.format = "ssh";
     signing.signByDefault = true;
-    signing.key = "~/.ssh/github_signing";
+    signing.key = "~/.ssh/git";
     settings = {
       user.name = "Kieran James";
       user.email = "49641524+kieran85james@users.noreply.github.com";
@@ -95,10 +95,10 @@
         hostname = "github.com";
         user = "kieran85james";
         port = 22;
-        identityFile = "~/.ssh/github_authentication";
+        identityFile = "~/.ssh/github";
       };
     };
-    extraConfig = "Include /run/agenix/ssh-config-kieran";
+    extraConfig = "Include /run/agenix/kieran-ssh-config";
   };
 
   # Let Home Manager install and manage itself.

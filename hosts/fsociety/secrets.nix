@@ -15,48 +15,47 @@ in
     ];
 
     secrets = {
-      # Kieran
-      passwdhash-kieran = {
-        file = ../../secrets/passwdhash-kieran.age;
+      kieran-passwdhash = {
+        file = ../../secrets/kieran/passwdhash.age;
       };
-      ssh-config-kieran = {
-        file = ../../secrets/ssh-config-kieran.age;
+      kieran-ssh-config = {
+        file = ../../secrets/kieran/ssh-config.age;
         owner = "${dynamicUser}";
         group = "users";
         mode = "0600";
       };
-      ssh-github-authentication-public-kieran = {
-        file = ../../secrets/ssh-github-authentication-public-kieran.age;
+      kieran-ssh-github-public = {
+        file = ../../secrets/kieran/ssh-github-public.age;
         owner = "${dynamicUser}";
         group = "users";
         mode = "0644";
-        path = "/home/${dynamicUser}/.ssh/github_authentication.pub";
+        path = "/home/${dynamicUser}/.ssh/github.pub";
       };
-      ssh-github-authentication-private-kieran = {
-        file = ../../secrets/ssh-github-authentication-private-kieran.age;
+      kieran-ssh-github-private = {
+        file = ../../secrets/kieran/ssh-github-private.age;
         owner = "${dynamicUser}";
         group = "users";
         mode = "0600";
-        path = "/home/${dynamicUser}/.ssh/github_authentication";
+        path = "/home/${dynamicUser}/.ssh/github";
       };
-      ssh-github-signing-public-kieran = {
-        file = ../../secrets/ssh-github-signing-public-kieran.age;
+      kieran-ssh-git-public = {
+        file = ../../secrets/kieran/ssh-git-public.age;
         owner = "${dynamicUser}";
         group = "users";
         mode = "0644";
-        path = "/home/${dynamicUser}/.ssh/github_signing.pub";
+        path = "/home/${dynamicUser}/.ssh/git.pub";
       };
-      ssh-github-signing-private-kieran = {
-        file = ../../secrets/ssh-github-signing-private-kieran.age;
+      kieran-ssh-git-private = {
+        file = ../../secrets/kieran/ssh-git-private.age;
         owner = "${dynamicUser}";
         group = "users";
         mode = "0600";
-        path = "/home/${dynamicUser}/.ssh/github_signing";
+        path = "/home/${dynamicUser}/.ssh/git";
       };
       
       # Gemma
-      passwdhash-gemma = {
-        file = ../../secrets/passwdhash-gemma.age;
+      gemma-passwdhash = {
+        file = ../../secrets/gemma/passwdhash.age;
       };
     };
   };
