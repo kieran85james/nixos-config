@@ -10,7 +10,7 @@ in
   users.users."${dynamicUser}" = {
     # Generate password hash with command `mkpasswd --method=sha512crypt`
     # initialHashedPassword = "$6$eYMRJK285250PLWQ$6DWnl0IcAApJe9OM..VAMbqqaYECf6bghc50xyR1K/Rf5JjH56bseWpYP6ArK2kgpFg7p0VO1AB6BNGJa7/SZ0";
-    hashedPasswordFile = config.age.secrets.passwdhash-kieran.path;
+    hashedPasswordFile = config.age.secrets.kieran-passwdhash.path;
     isNormalUser = true;
     description = "Kieran";
     extraGroups = [

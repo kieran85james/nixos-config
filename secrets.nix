@@ -9,12 +9,12 @@ let
   
   users = [ kieran ];
 in {
-  "secrets/passwdhash-kieran.age".publicKeys = systems ++ users;
-  "secrets/ssh-config-kieran.age".publicKeys = systems ++ users;
-  "secrets/ssh-github-authentication-public-kieran.age".publicKeys = systems ++ users;
-  "secrets/ssh-github-authentication-private-kieran.age".publicKeys = systems ++ users;
-  "secrets/ssh-github-signing-public-kieran.age".publicKeys = systems ++ users;
-  "secrets/ssh-github-signing-private-kieran.age".publicKeys = systems ++ users;
+  "secrets/kieran/passwdhash.age".publicKeys = systems ++ users;
+  "secrets/kieran/ssh-config.age".publicKeys = systems ++ users;
+  "secrets/kieran/ssh-git-public.age".publicKeys = systems ++ users;
+  "secrets/kieran/ssh-git-private.age".publicKeys = systems ++ users;
+  "secrets/kieran/ssh-github-public.age".publicKeys = systems ++ users;
+  "secrets/kieran/ssh-github-private.age".publicKeys = systems ++ users;
   
-  "secrets/passwdhash-gemma.age".publicKeys = systems ++ users;
+  "secrets/gemma/passwdhash.age".publicKeys = systems ++ users;
 }

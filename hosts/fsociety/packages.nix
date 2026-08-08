@@ -2,7 +2,7 @@
 {
   environment.systemPackages = (with pkgs; [
     joplin-desktop
-    stable.bitwarden-desktop
+    # stable.bitwarden-desktop
     stable.google-chrome
     stable.libreoffice
     stable.spotify
