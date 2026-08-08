@@ -24,20 +24,6 @@ in
         group = "users";
         mode = "0600";
       };
-      kieran-ssh-github-public = {
-        file = ../../secrets/kieran/ssh-github-public.age;
-        owner = "${dynamicUser}";
-        group = "users";
-        mode = "0644";
-        path = "/home/${dynamicUser}/.ssh/github.pub";
-      };
-      kieran-ssh-github-private = {
-        file = ../../secrets/kieran/ssh-github-private.age;
-        owner = "${dynamicUser}";
-        group = "users";
-        mode = "0600";
-        path = "/home/${dynamicUser}/.ssh/github";
-      };
       kieran-ssh-git-public = {
         file = ../../secrets/kieran/ssh-git-public.age;
         owner = "${dynamicUser}";
@@ -51,6 +37,20 @@ in
         group = "users";
         mode = "0600";
         path = "/home/${dynamicUser}/.ssh/git";
+      };
+      kieran-ssh-github-public = {
+        file = ../../secrets/kieran/ssh-github-public.age;
+        owner = "${dynamicUser}";
+        group = "users";
+        mode = "0644";
+        path = "/home/${dynamicUser}/.ssh/github.pub";
+      };
+      kieran-ssh-github-private = {
+        file = ../../secrets/kieran/ssh-github-private.age;
+        owner = "${dynamicUser}";
+        group = "users";
+        mode = "0600";
+        path = "/home/${dynamicUser}/.ssh/github";
       };
       
       # Gemma
