@@ -18,6 +18,7 @@ in {
       stable.dbeaver-bin
       stable.postman
       stable.slack
+      agenix-cli
     ];
   };
 }
