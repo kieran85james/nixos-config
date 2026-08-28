@@ -81,6 +81,9 @@ with lib; let
     "hms" = "home-manager switch --flake .";
 
     "ncg" = "nix-collect-garbage -d";
+
+    "agenix-edit" = "agenix --identity ~/.ssh/$USER -e";
+    "agenix-rekey" = "agenix --identity ~/.ssh/$USER --rekey";
   };
 in {
   options.features.cli.bash.enable =

@@ -11,7 +11,7 @@ in
     # Required for agenix if OpenSSH is disabled.
     identityPaths = [
       "/etc/ssh/ssh_host_ed25519_key"
-      "/home/${dynamicUser}/.ssh/kieran"
+      "/home/${dynamicUser}/.ssh/${dynamicUser}"
     ];
 
     secrets = {
