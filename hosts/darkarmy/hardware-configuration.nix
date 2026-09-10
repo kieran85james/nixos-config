@@ -4,29 +4,37 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
+
+  boot = {
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
+    initrd.availableKernelModules = [
+      "ahci"
+      "xhci_pci"
+      "sd_mod"
+      "usb_storage"
     ];
-
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/f2af06a8-6420-4025-a52d-39cdabf07ded";
-      fsType = "ext4";
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/34C4-10AE";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
-    };
-
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/9f1fc612-bb6b-4003-839c-4caf766d8e74"; }
+    initrd.kernelModules = [ ];
+    kernelModules = [ "kvm-intel" ];
+    kernelParams = [
+      "quiet"
+      "splash"
+      "intremap=on"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
     ];
+    extraModulePackages = [ ];
+    plymouth.enable = true;
+  };
+
+  # Enables fstrim
+  services.fstrim.enable = true;
+  services.fstrim.interval = "weekly";
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

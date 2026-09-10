@@ -1,0 +1,24 @@
+{ pkgs, lib, inputs, outputs, ... }:
+
+{
+  imports = [
+    ../common
+    ../common/users/kieran.nix
+    ../common/users/gemma.nix
+    inputs.home-manager.nixosModules.home-manager
+    
+    ./services
+    ./packages.nix
+    ./configuration.nix
+    ./secrets.nix
+  ];
+  
+  users.mutableUsers = false;
+
+  nixosModules.gnome.enable = true;
+
+  extraServices.displaylink.enable = false;
+  extraServices.docker.enable = true;
+  extraServices.flatpak.enable = false;
+  extraServices.virtualisation.enable = true;
+}

@@ -52,21 +52,21 @@
         ];
       };
 
-      # Work
-      e-corp = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; };
-        modules = [
-          ./hosts/e-corp
-          inputs.disko.nixosModules.disko
-          agenix.nixosModules.default
-        ];
-      };
-
       # Personal
       darkarmy = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
           ./hosts/darkarmy
+          inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
+        ];
+      };
+
+      # Work
+      e-corp = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/e-corp
           inputs.disko.nixosModules.disko
           agenix.nixosModules.default
         ];
