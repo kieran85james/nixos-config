@@ -29,7 +29,7 @@ in {
       stable.gnome-clocks
       stable.gnome-music
       stable.decibels
-      stable.totem
+      stable.showtime
     ];
 
     # GNOME packages.
