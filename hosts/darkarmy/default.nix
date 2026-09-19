@@ -17,7 +17,7 @@
 
   nixosModules.gnome.enable = true;
 
-  extraServices.displaylink.enable = false;
+  extraServices.displaylink.enable = true;
   extraServices.docker.enable = true;
   extraServices.flatpak.enable = false;
   extraServices.virtualisation.enable = true;
