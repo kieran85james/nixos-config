@@ -50,13 +50,12 @@ in mkIf cfg.enable {
         "org.gnome.seahorse.Application.desktop"
         "proton.vpn.app.gtk.desktop"
         "org.gnome.Connections.desktop"
-        "org.gnome.FileRoller.desktop"
         "org.gnome.Calculator.desktop"
         "org.gnome.Weather.desktop"
         "org.gnome.font-viewer.desktop"
         "org.gnome.Characters.desktop"
         "cups.desktop"
-        "yelp.desktop"
+        "org.gnome.Yelp.desktop"
       ];
     };
     "org/gnome/desktop/app-folders/folders/Documents" = {
@@ -69,8 +68,8 @@ in mkIf cfg.enable {
         "base.desktop"
         "draw.desktop"
         "math.desktop"
-        "org.gnome.Evince.desktop"
-        "simple-scan.desktop"
+        "org.gnome.Papers.desktop"
+        "org.gnome.SimpleScan.desktop"
         "org.gnome.TextEditor.desktop"
       ];
     };
