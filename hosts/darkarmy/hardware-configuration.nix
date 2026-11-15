@@ -9,9 +9,7 @@
   ];
 
   boot = {
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    initrd.systemd.enable = true;
+    consoleLogLevel = 0;
     initrd.availableKernelModules = [
       "ahci"
       "xhci_pci"
@@ -25,7 +23,7 @@
       "splash"
       "intremap=on"
       "boot.shell_on_fail"
-      "udev.log_priority=3"
+      "udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
     extraModulePackages = [ ];
