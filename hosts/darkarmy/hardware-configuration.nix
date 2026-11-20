@@ -15,6 +15,7 @@
       "xhci_pci"
       "sd_mod"
       "usb_storage"
+      "usbhid"
     ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
@@ -29,6 +30,22 @@
     extraModulePackages = [ ];
     plymouth.enable = true;
   };
+
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/b65deff3-4ab9-4a7d-afcd-2c2e0158ba5c";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
+    };
+
+  boot.initrd.luks.devices."luks-1a4cb4f1-59b9-4bbb-972b-dc2bda986ff3".device = "/dev/disk/by-uuid/1a4cb4f1-59b9-4bbb-972b-dc2bda986ff3";
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/636C-8896";
+      fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
+    };
+
+  swapDevices = [ ];
 
   # Enables fstrim
   services.fstrim.enable = true;
