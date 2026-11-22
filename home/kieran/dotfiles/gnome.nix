@@ -17,7 +17,7 @@ in mkIf cfg.enable {
         "slack.desktop"
         "bitwarden.desktop"
         "com.belmoussaoui.Authenticator.desktop"
-        "org.gnome.Geary.desktop"
+        "org.gnome.Evolution.desktop"
         "org.gnome.Nautilus.desktop"
         "spotify.desktop"
       ];
