@@ -7,6 +7,7 @@
 with lib; let
   cfg = config.features.desktop.xdg;
   browser = ["google-chrome.desktop"];
+  emailClient = ["org.gnome.Evolution.desktop"];
   archiveManager = ["org.gnome.FileRoller.desktop"];
   imageViewer = ["org.gnome.Loupe.desktop"];
   audioPlayer = ["org.gnome.Rhythmbox3.desktop"];
@@ -55,6 +56,7 @@ in {
           "x-scheme-handler/http" = browser;
           "x-scheme-handler/https" = browser;
           "x-scheme-handler/unknown" = browser;
+          "x-scheme-handler/mailto" = emailClient;
           "x-scheme-handler/spotify" = ["spotify.desktop"];
 
           "audio/*" = audioPlayer;
