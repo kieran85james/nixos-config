@@ -38,6 +38,7 @@ in {
       stable.gnome-tweaks
       stable.dconf-editor
       stable.gnome-online-accounts
+      stable.evolution
     ];
 
     # Enable programs.
